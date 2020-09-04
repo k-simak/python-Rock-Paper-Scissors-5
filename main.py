@@ -25,20 +25,26 @@ if user_answer == 1:
     winner = False
 elif user_answer == 2:
   print ("You choose PAPER")
+  if cpu == 3:
+    print("CPU scissors cuts your PAPER")
+    winner = False
 elif user_answer == 3:
   print ("You choose SCISSORS")
+  if cpu == 1:
+    print("CPU rock smashes your SCISSORS")
+    winner = False
 else:
   print ("choose something idiot \n ONLY CHOOSE FROM \n\n ROCK PAPER SCISSORS")
 
 #THIS IS THE WIN / TIE CHECK
 if user_answer != cpu:
   if winner == False:
-    print("\nYOU LOSE\n")
+    print ("YOU LOSE")
   else:
-    print("\nYOU ARE THE WINNER!!\n")
+    print ("YOU WIN")
 else:
   tie = True
-  print ("\nWE HAVE A TIE!!!!!")
+  print ("WE HAVE A TIE")
 
 
 
@@ -53,7 +59,7 @@ else:
 
 
 #THIS IS FOR DEBUGGING 
-print("\n\n\n### THIS IS ONLY FOR DEBUGGING ###")
+print("\n\n### THIS IS ONLY FOR DEBUGGING ###")
 print(name)
 print(user_answer)
 print(cpu)
