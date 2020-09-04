@@ -30,18 +30,20 @@ elif user_answer == 3:
 else:
   print ("choose something idiot \n ONLY CHOOSE FROM \n\n ROCK PAPER SCISSORS")
 
-#THIS IS THE TIE CHECK
-if user_answer == cpu:
+#THIS IS THE WIN / TIE CHECK
+if user_answer != cpu:
+  if winner == False:
+    print("\nYOU LOSE\n")
+  else:
+    print("\nYOU ARE THE WINNER!!\n")
+else:
   tie = True
-  print ("\n\nWE HAVE A TIE!!!!!\n\n")
+  print ("\nWE HAVE A TIE!!!!!")
 
 
 
 #THIS IS THE  CPU WIN CHECK
-if winner == False:
-  print("\nYOU LOSE\n")
-else:
-  print("\nYOU ARE THE WINNER!!\n")
+
 
 #print(name + " WINS!!!!")
 
