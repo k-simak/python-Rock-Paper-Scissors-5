@@ -1,6 +1,7 @@
 import random
 
 winner = True
+options = ["Rock", "Paper", "Scissors"]
 #Title Screen
 
 # Give them instructions
@@ -9,18 +10,18 @@ winner = True
 
 #Ask the user name
 name  = input("what's your name\n")  
-user_answer = int(input("\nHi " + name + " What would you like to choose?\nWrite the NUMBER OF YOUR CHOICE\n\n(1)rock\n(2)paper\n(3)scissors\n\n"))
+user_answer = options[int(input("\nHi " + name + " What would you like to choose?\nWrite the NUMBER OF YOUR CHOICE\n\n(0)rock\n(1)paper\n(2)scissors\n\n"))]
 
 #CPU choses at the same time as player
-cpu = random.randint(1,3)
-
+      #OLD CODE cpu = random.randint(1,3)
+cpu = options[random.randint(0,2)]
 
 # 1=Rock 2=Paper 3=Scissors
 #THIS IS THE USER CHOICE
 if user_answer == 1:
   print ("\nYou choose ROCK")
   #print ("The CPU chose {}" .format(cpu))
-  if cpu == 2:
+  if cpu == options[1]:
     print("CPU paper covers your ROCK")
     winner = False
 elif user_answer == 2:
